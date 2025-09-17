@@ -1,0 +1,28 @@
+{
+  "name": "Differential PPM Decoder",
+  "apiVersion": "1.0.0",
+  "author": "Jonathan Diamond",
+  "version": "0.0.1",
+  "description": "",
+  "extensions": {
+    "diff_ppm": {
+      "type": "DigitalMeasurement",
+      "entryPoint": "diff_ppm_decoder.DiffPPMDecoder",
+      "metrics": {
+        "bit_vals": {
+          "name": "PPM Bit Values",
+          "notation": "ppm_packed_bit_value"
+        },
+        "num_bits": {
+          "name": "PPM Bit Count",
+          "notation": "ppm_num_bits"
+        },
+        "gap_threshold": {
+          "name": "PPM Bit Threshold",
+          "notation": "ppm_gap_threshold",
+          "units": "s"
+        }
+      }
+    }
+  }
+}
