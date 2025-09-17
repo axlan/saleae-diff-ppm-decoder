@@ -2,7 +2,7 @@
   "name": "Differential PPM Decoder",
   "apiVersion": "1.0.0",
   "author": "Jonathan Diamond",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "extensions": {
     "diff_ppm": {

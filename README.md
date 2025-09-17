@@ -79,5 +79,5 @@ Only consider pulses where the gap is less than this many seconds.
 
 Hard code a pulse gap threshold for decoding values.
 If the gap between pulses is greater than this value, decode a `1`. Otherwise decond a `0`.
-If this is `None` use the median gap time as the threshold.
+If this is `None` use the average of the largest and smallest gap times as the threshold.
 

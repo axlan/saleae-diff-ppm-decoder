@@ -25,7 +25,7 @@ MAX_GAP = 1
 
 # Hard code a pulse gap threshold for decoding values.
 # If the gap between pulses is greater than this value, decode a `1`. Otherwise decond a `0`.
-# If this is `None` use the median gap time as the threshold.
+# If this is `None` use the average of the largest and smallest gap times as the threshold.
 MIN_GAP_FOR_1 = None
 
 class DiffPPMDecoder(DigitalMeasurer):
@@ -62,7 +62,7 @@ class DiffPPMDecoder(DigitalMeasurer):
         if MIN_GAP_FOR_1 is not None:
             gap_threshold = MIN_GAP_FOR_1
         elif len(self.gap_durations) > 0:
-            gap_threshold = sum(self.gap_durations) / len(self.gap_durations)
+            gap_threshold = (max(self.gap_durations) + min(self.gap_durations)) / 2.0
         else:
             gap_threshold = 0
 
