@@ -28,11 +28,11 @@ To get the bit values, convert `ppm_packed_bit_value` to binary. For example, `8
 
 Many tools can do this including most calculator apps:
 
-![Convert integer to binary](docs\prog_calc.png)
+![Convert integer to binary](docs/prog_calc.png)
 
 **NOTE:** bits are decoded just based on the low time before a rising edge. This means that the measurement range needs to start during the first high pulse, and end during the last high pulse. Otherwise, the first or last bit may be incorrect.
 
-![Measure PPM bits](docs\logic2_pic.png)
+![Measure PPM bits](docs/logic2_pic.png)
 
 ## Parameters
 
