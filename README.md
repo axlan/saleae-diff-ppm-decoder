@@ -1,6 +1,6 @@
 # Differential PPM Decoder
 
-An extension for Saleae Logic 2 to add a digital measurement for decoding a [differential poistion pulse modulated](https://www.pcbheaven.com/wikipages/Pulse_Position_Modulation/) (diff-ppm) signal.
+An extension for Saleae Logic 2 to add a digital measurement for decoding a [differential position pulse modulated](https://www.pcbheaven.com/wikipages/Pulse_Position_Modulation/) (diff-ppm) signal.
 
 This extension would be better implemented using the [Protocol Analyzer SDK](https://support.saleae.com/saleae-api-and-sdk/protocol-analyzer-sdk), but this is a quick implementation to decode short sequences.
 
@@ -36,9 +36,10 @@ Many tools can do this including most calculator apps:
 
 ## Parameters
 
-Since [Digital Measurement Extension](https://support.saleae.com/extensions/measurement-extensions/digital-measurement-extensions) doesn't allow parameters to be set, there are some paramaters that can be modified in [diff_ppm_decoder.py](diff_ppm_decoder.py) to change the extensions behavior.
+Since [Digital Measurement Extensions](https://support.saleae.com/extensions/measurement-extensions/digital-measurement-extensions) don't allow parameters to be set, there are some paramaters that can be modified in [diff_ppm_decoder.py](diff_ppm_decoder.py) to change the extension's behavior.
 
 ### OUT_FILE
+
 Set to a file path to write measurement results to file. If `None` don't write values to a file.
 
 Writing to a file makes it much easier to collect data than copying from the GUI.
@@ -78,6 +79,5 @@ Only consider pulses where the gap is less than this many seconds.
 ### MIN_GAP_FOR_1
 
 Hard code a pulse gap threshold for decoding values.
-If the gap between pulses is greater than this value, decode a `1`. Otherwise decond a `0`.
+If the gap between pulses is greater than this value, decode a `1`. Otherwise decode a `0`.
 If this is `None` use the median gap time as the threshold.
-
